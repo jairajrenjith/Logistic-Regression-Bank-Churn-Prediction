@@ -29,6 +29,7 @@ This notebook includes:
 Logistic-Regression-Bank-Churn-Prediction/
 │
 ├── logistic_regression_bank_churn.ipynb
+├── classification_with_pytorch_cognitiveclass_course_completion.png
 ├── bank_churn.csv
 └── README.md
 ```
