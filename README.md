@@ -55,6 +55,42 @@ Dataset contains **no missing values**.
 
 ---
 
+## Logistic Regression Model
+
+1. Training code:
+
+  ```python
+  log_reg = LogisticRegression(max_iter=3000, solver='lbfgs')
+  log_reg.fit(X_train_scaled, y_train)
+  ```
+
+2. Cross-validation:
+
+  ```python
+  cv_scores = cross_val_score(log_reg, X, y, cv=10, scoring='accuracy')
+  ```
+
+---
+
+
+## ANN Model (Keras)
+
+1. Model definition:
+
+  ```python
+  model = Sequential()
+  model.add(Dense(1, input_dim=X_train.shape[1], activation='sigmoid'))
+  ```
+
+2. Training:
+
+  ```python
+  model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+  model.fit(X_train, y_train, validation_split=0.2, epochs=50, batch_size=32)
+  ```
+
+---
+
 ## Installation & Setup
 
 1. Clone the repository:
@@ -87,23 +123,6 @@ Dataset contains **no missing values**.
 
 ---
 
-## Logistic Regression Model
-
-1. Training code:
-
-  ```python
-  log_reg = LogisticRegression(max_iter=3000, solver='lbfgs')
-  log_reg.fit(X_train_scaled, y_train)
-  ```
-
-2. Cross-validation:
-
-  ```python
-  cv_scores = cross_val_score(log_reg, X, y, cv=10, scoring='accuracy')
-  ```
-
----
-
 ## Evaluation Metrics
 
 The notebook generates:
@@ -118,23 +137,6 @@ The notebook generates:
 
 ---
 
-## ANN Model (Keras)
-
-1. Model definition:
-
-  ```python
-  model = Sequential()
-  model.add(Dense(1, input_dim=X_train.shape[1], activation='sigmoid'))
-  ```
-
-2. Training:
-
-  ```python
-  model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-  model.fit(X_train, y_train, validation_split=0.2, epochs=50, batch_size=32)
-  ```
-
----
 
 
 ## Conclusion
