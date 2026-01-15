@@ -26,7 +26,7 @@ This notebook includes:
 ## Repository Structure
 
 ```
-logistic-regression-bank-churn-prediction/
+Logistic-Regression-Bank-Churn-Prediction/
 │
 ├── logistic_regression_bank_churn.ipynb
 ├── bank_churn.csv
